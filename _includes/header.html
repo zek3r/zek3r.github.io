@@ -1,8 +1,9 @@
 <header class="site-header" role="banner">
 
-  <img src="cc_jthanew.png" alt="title", width="25">
-
   <div class="wrapper">
+  	
+  	  <img src="cc_jthanew.png" alt="title", width="25">
+  	
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
