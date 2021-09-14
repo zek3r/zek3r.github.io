@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![alt text](https://zek3r.github.io/profile.jpeg "Title")
+![alt text](https://zek3r.github.io/profile.jpeg "zeke spent all night making this webpage")
 
 # Bio
 
@@ -13,4 +13,4 @@ I’m a PhD student in applied mathematics at Université de Montréal and Mila,
 
 # CV
 
-Check out my CV [here](https://zek3r.github.io/cv_current.pdf "Zeke's CV") :)
+Check out my CV [here](https://zek3r.github.io/cv_current.pdf "zeke's cv") :)
