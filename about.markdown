@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![alt text](profile.png "mouse-over text")
+![alt text](profile.jpeg?raw=true "Title")
 
 # Bio
 
