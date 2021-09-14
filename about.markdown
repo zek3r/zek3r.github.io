@@ -13,4 +13,4 @@ I’m a PhD student in applied mathematics at Université de Montréal and Mila,
 
 # CV
 
-[Check out my CV here :)](cv_current.pdf "Zeke's CV")
+Check out my CV [here](cv_current.pdf "Zeke's CV") :)
