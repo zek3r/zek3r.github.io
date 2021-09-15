@@ -38,7 +38,7 @@ plugins:
   
 header_pages:
   - about.markdown
-  - blog.markdown
+  - author.markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.
