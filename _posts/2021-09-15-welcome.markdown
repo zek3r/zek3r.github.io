@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Welcome to Computational Cognition!"
+date:   2021-09-10 21:10:02 -0400
+categories: jekyll update
+---
+
+Welcome to my new website! To learn about me, check out the "author" page; to learn about the website, check out "about"; to contact me or follow me on social media, check out the site footer. First blog post to come soon :)
