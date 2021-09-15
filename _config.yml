@@ -22,7 +22,7 @@ title: Computational Cognition
 author: Ezekiel Williams
 email: yes
 description: >- # this means to ignore newlines until "baseurl:"
-  This website is my contribution to science communication, a place to discuss my current research, and my means of organizing my thoughts on the topics I am passionate about: mathematics, neuroscience, and artificial intelligence. 
+  A website by Zeke W. on the mathematical principles of artificial and biological cognition.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: zek3r
