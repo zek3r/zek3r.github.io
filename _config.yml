@@ -22,7 +22,7 @@ title: Computational Cognition
 author: Ezekiel Williams
 email: yes
 description: >- # this means to ignore newlines until "baseurl:"
-  A website on the mathematical principles of artificial and biological cognition, written by a Mila (Quebec AI institute) PhD researcher.
+  A website on the mathematical principles of artificial and biological cognition, written by a Mila (Quebec AI institute) PhD student.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: zek3r
