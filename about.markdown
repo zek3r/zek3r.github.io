@@ -14,9 +14,9 @@ I’m a PhD student in applied mathematics at Université de Montréal and Mila,
 
 
 <div style="text-align:center">    
-  <a href="https://zek3r.github.io/cv_current.pdf", style="color:yellow;">CV</a>
+  <a href="https://zek3r.github.io/cv_current.pdf" style="color:yellow">CV</a>
   &nbsp; &nbsp; &nbsp; &nbsp;
-  <a href="https://scholar.google.ca/citations?user=KwgL380AAAAJ&hl=en&oi=ao", style="color:yellow;">Publications</a>
+  <a href="https://scholar.google.ca/citations?user=KwgL380AAAAJ&hl=en&oi=ao" style="color:yellow">Publications</a>
 </div>
 
 
