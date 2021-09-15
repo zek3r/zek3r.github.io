@@ -14,12 +14,11 @@ I’m a PhD student in applied mathematics at Université de Montréal and Mila,
 
 
 <div style="text-align:center">    
-  <a href="https://zek3r.github.io/cv_current.pdf">CV</a>
-  &nbsp; &nbsp; &nbsp;
-  <a href="https://scholar.google.ca/citations?user=KwgL380AAAAJ&hl=en&oi=ao">Publications</a>
+  <b><a href="https://zek3r.github.io/cv_current.pdf", style="color:yellow;">CV</a><b>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <b><a href="https://scholar.google.ca/citations?user=KwgL380AAAAJ&hl=en&oi=ao", style="color:yellow;">Publications</a><b>
 </div>
 
-**[CV](https://zek3r.github.io/cv_current.pdf "zeke's cv")**       **[Publications](https://scholar.google.ca/citations?user=KwgL380AAAAJ&hl=en&oi=ao "google scholar")**
 
 
 # About Blog
