@@ -6,7 +6,7 @@ permalink: /about/
 
 
 
-<p style="text-align:center;"><img src="https://zek3r.github.io/profile.jpeg" title="zeke spent all night making this webpage" width="200"/></p>
+<p style="text-align:center;"><img src="https://zek3r.github.io/profile.jpeg" title="zeke spent all night making this webpage" width="300"/></p>
 
 # About Ezekiel (Zeke)
 
