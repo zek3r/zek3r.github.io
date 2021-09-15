@@ -6,7 +6,7 @@ permalink: /about/
 
 
 
-<p style="text-align:center;"><img src="https://zek3r.github.io/assets/cc_jthanew.png" title="High socks are cool! Gotta wear 'em outside!" width="300"/></p>
+<p style="text-align:center;"><img src="https://zek3r.github.io/assets/cc_jthanew.png" title="&quot;High socks are cool! Gotta wear 'em outside!&quot;" width="300"/></p>
 
 # Computational Cognition
 
