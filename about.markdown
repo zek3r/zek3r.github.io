@@ -4,7 +4,10 @@ title: About
 permalink: /about/
 ---
 
-<img src="https://zek3r.github.io/profile.jpeg" alt="zeke spent all night making this webpage" width="50"/>
+
+<p class="aligncenter">
+    <img src="https://zek3r.github.io/profile.jpeg" alt="zeke spent all night making this webpage" width="50"/>
+</p>
 
 [comment]: <> (![alt text](https://zek3r.github.io/profile.jpeg "zeke spent all night making this webpage"))
 
