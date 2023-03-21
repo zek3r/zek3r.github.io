@@ -28,6 +28,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: zek3r
 github_username:  zek3r
 gs_title: Publications
+mastodon:
+- username: ezekiel
+  instance: fediscience.org
 cv_link: assets/cv_mar23.pdf
 
 # Build settings
