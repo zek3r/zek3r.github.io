@@ -6,11 +6,11 @@ permalink: /author/
 
 
 
-<p style="text-align:center;"><img src="https://zek3r.github.io/assets/profile.jpeg" title="zeke spent all night making this webpage" width="300"/></p>
+<p style="text-align:center;"><img src="https://zek3r.github.io/assets/profile3.jpeg" title="zeke spent all night making this webpage" width="300"/></p>
 
 # Ezekiel (Zeke) Williams
 
-I’m a PhD student in applied mathematics at Université de Montréal and Mila, Quebec AI Institute, doing research in machine learning and computational neuroscience. I’m really passionate about these topics and spend excessive amounts of time studying them! In my spare time I frolic outside, play guitar and sign petitions for climate justice.
+I’m a PhD student in applied mathematics at Université de Montréal and Mila, Quebec AI Institute, doing research in machine learning and computational neuroscience. I’m really passionate about these topics and spend excessive amounts of time studying them! In my spare time I frolic outside, play guitar, and engage in climate justice and degrowth activism.
 
 
 <div style="text-align:center">    
