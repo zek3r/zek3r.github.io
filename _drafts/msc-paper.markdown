@@ -31,7 +31,7 @@ Modern science doesn't fully understand how to read the neural "spike language".
 
 <center>
 <figure>
-    <img src="https://zek3r.github.io/assets/msc/blogpost_fig2.jpg" title="what font is this" width="200" />
+    <img src="https://zek3r.github.io/assets/msc/blogpost_fig2.jpg" title="what font is this" width="600" />
     <figcaption> <b>Rate vs. temporal codes:</b> For a rate code, the spike sequence in plot A is the same as that of plot B, but not plot C. For a temporal code, the ISI (distance between consecutive spikes) matters (see plot A)</figcaption>
 </figure>
 </center>
