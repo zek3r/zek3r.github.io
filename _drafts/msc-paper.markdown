@@ -16,7 +16,7 @@ At a high level, the research question asked by my MSc paper is *how can we unde
 
 <center>
 <figure>
-    <img src="https://zek3r.github.io/assets/msc/blogpost_fig1.jpg" title="i am artist" />
+    <img src="https://zek3r.github.io/assets/msc/blogpost_fig1.jpg" title="i am artist" width="600" />
     <figcaption> <b>Neurons speak in "spikes":</b> A neuron receives electrical input from other neurons via its 'branches' (known as dendrites) and sends electrical signals to other neurons via its 'trunk' (axon), using a tree analogy. The membrane voltage in the axon of neuron A is plotted as a function of time in the bottom left.</figcaption>
 </figure>
 </center>
@@ -36,9 +36,6 @@ Modern science doesn't fully understand how to read the neural "spike language".
 </figure>
 </center>
 
-![Rate codes vs temporal codes](/_drafts/images/blogpost_fig3.pdf)
-*For a rate code, the spike sequence in plot A is the same as that of plot B, but not plot C. For a temporal code, the ISI (distance between consecutive spikes) matters (see plot A).
-
 There are many theories for how to read the neural language, or "code". These theories can be divided into two categories: **rate codes** and **temporal codes**. Rate code theories say that the only important aspect of the spike messages that a given neuron, neuron 'A', sends to another, neuron 'B', is the *rate* of spikes. If neuron A sends 1 spike every second for 3 seconds, then neuron B will see that neuron A's spike rate is 3 spikes per second, and this will mean something *different* to neuron B than if A had sent neuron B 2 spikes per second during each of the three seconds--a spike rate of 2 spikes per second--but will have the same meaning as if neuron A had send 3 spikes to neuron B in the first second and no spikes in the next two seconds: 3 spikes in 3 seconds gives the same rate no matter which specific times within the three second window the spikes are sent. 
 
 Conversely, temporal coding theories say that the relative timing of the spikes does matter: that is, when neuron A sends 3 spikes in the first second this is different than if A had distributed its spikes evenly in time, first spike at second 1, the second spike one second later at second 2, the third two seconds later at second 3. In this way, in a temporal code, when A sends 2 spikes separated by 1 second this would represent a different word than if A had sent B two spikes separated by 2 seconds $^\dagger$ .
@@ -46,6 +43,13 @@ Conversely, temporal coding theories say that the relative timing of the spikes 
 My research paper looked at addressing a key question that appears in a certain class of temporal codes--how to resolve ambiguity between spike sequences.
 
 ### Ambiguity in bursty brain cell messages
+
+<center>
+<figure>
+    <img src="https://zek3r.github.io/assets/msc/blogpost_fig3.jpg" title="what font is this" width="600" />
+    <figcaption> <b>Ambiguity of burst codes:</b> In plot A, spikes close together--small ISIs--are clearly a burst, spikes far apart--big ISIs--a clearly not a burst, but what about 'medium' ISIs? One can plot the frequency of occurence of a given ISI, or probability of an ISI occurring, for a given cell, as in plots B and C. Plot B shows not very many medium ISIs, so it's unambiguous. Alternatively, plot C has many medium ISIs, so it's very ambiguous!</figcaption>
+</figure>
+</center>
 
 ![Medium length ISIs can be ambiguous in a burst code!](/_drafts/images/blogpost_fig3.pdf)
 *In plot A, spikes close together--small ISIs--are clearly a burst, spikes far apart--big ISIs--a clearly not a burst, but what about 'medium' ISIs? One can plot the frequency of occurence of a given ISI, or probability of an ISI occurring, for a given cell, as in plots B and C. Plot B shows not very many medium ISIs, so it's unambiguous. Alternatively, plot C has many medium ISIs, so it's very ambiguous!*.
