@@ -14,6 +14,10 @@ At a high level, the research question asked by my MSc paper is *how can we unde
 
 ### The language of brain cells
 
+<p align="center">
+  <img src="/Users/ezekielwilliams/documents/website/zek3r.github.io/assets/msc" />
+</p>
+
 ![Neuron A messages Neuron B](/_drafts/images/blogpost_fig1.jpg)
 *A neuron receives electrical input from other neurons via its 'branches' (known as dendrites) and sends electrical signals to other neurons via its 'trunk' (axon), using a tree analogy. The membrane voltage in the axon of neuron A is plotted as a function of time in the bottom left.*
 
