@@ -14,7 +14,7 @@ At a high level, the research question asked by my MSc paper is *how can we unde
 
 ### The language of brain cells
 
-![Neuron A messages Neuron B](/_drafts/images/blogpost-fig1.pdf)
+![Neuron A messages Neuron B](/_drafts/images/blogpost_fig1.jpg)
 *A neuron receives electrical input from other neurons via its 'branches' (known as dendrites) and sends electrical signals to other neurons via its 'trunk' (axon), using a tree analogy. The membrane voltage in the axon of neuron A is plotted as a function of time in the bottom left.*
 
 Your brain is composed of about 86 billion neurons--brain cells which are believed responsible for performing the computations that allow you to see, smell, think, talk, walk, and generally experience cognitive phenomena. To do this, these neurons communicate with each other, kind of like how a group of friends might text eachother to coordinate their work on a school project. However, while text chats are composed of words, neuron conversation is composed of electrical pulses that neuroscientists refer to as *action potentials*, or *"spikes"*.
@@ -25,7 +25,7 @@ Modern science doesn't fully understand how to read the neural "spike language".
 
 ### How neuroscientists think about brain cell messages
 
-![Rate codes vs temporal codes](/_drafts/images/blogpost-fig2.pdf)
+![Rate codes vs temporal codes](/_drafts/images/blogpost_fig2.pdf)
 *For a rate code, the spike sequence in plot A is the same as that of plot B, but not plot C. For a temporal code, the ISI (distance between consecutive spikes) matters (see plot A).
 
 There are many theories for how to read the neural language, or "code". These theories can be divided into two categories: **rate codes** and **temporal codes**. Rate code theories say that the only important aspect of the spike messages that a given neuron, neuron 'A', sends to another, neuron 'B', is the *rate* of spikes. If neuron A sends 1 spike every second for 3 seconds, then neuron B will see that neuron A's spike rate is 3 spikes per second, and this will mean something *different* to neuron B than if A had sent neuron B 2 spikes per second during each of the three seconds--a spike rate of 2 spikes per second--but will have the same meaning as if neuron A had send 3 spikes to neuron B in the first second and no spikes in the next two seconds: 3 spikes in 3 seconds gives the same rate no matter which specific times within the three second window the spikes are sent. 
@@ -36,7 +36,7 @@ My research paper looked at addressing a key question that appears in a certain 
 
 ### Ambiguity in bursty brain cell messages
 
-![Medium length ISIs can be ambiguous in a burst code!](/_drafts/images/blogpost-fig3.pdf)
+![Medium length ISIs can be ambiguous in a burst code!](/_drafts/images/blogpost_fig3.pdf)
 *In plot A, spikes close together--small ISIs--are clearly a burst, spikes far apart--big ISIs--a clearly not a burst, but what about 'medium' ISIs? One can plot the frequency of occurence of a given ISI, or probability of an ISI occurring, for a given cell, as in plots B and C. Plot B shows not very many medium ISIs, so it's unambiguous. Alternatively, plot C has many medium ISIs, so it's very ambiguous!*.
 
 Imagine that you have a temporal code where spikes that occur really close together mean something different from spikes that occur farther apart. This kind of code is called a *burst code* because two or more spikes close together in time--bursts of spikes--mean something different than other, more spread out, spike sequences. Messages sent using this code will be easy to read if spikes only occur *very* far apart--making them clearly non-bursts--or *very* close together--making them clearly bursts. But what if they occur intermediate distances apart? If there is no hard threshold between what is considered a *"burst"* and what isn't, then when neuron A sends neuron B spikes with time gaps of an intermediate length, there will be ambiguity when neuron B tries to understand what neuron A said because it won't know if the spikes were a burst or not. 
