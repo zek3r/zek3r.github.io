@@ -15,7 +15,7 @@ At a high level, the research question asked by my MSc paper is *how can we unde
 ### The language of brain cells
 
 <p align="center">
-  <img src="/Users/ezekielwilliams/documents/website/zek3r.github.io/assets/msc" />
+  <img src="/Users/ezekielwilliams/documents/website/zek3r.github.io/assets/msc/blogpost_fig1.jpg" />
 </p>
 
 ![Neuron A messages Neuron B](/_drafts/images/blogpost_fig1.jpg)
