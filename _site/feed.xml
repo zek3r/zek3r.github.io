@@ -1,1 +1,155 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-02T13:18:50-05:00</updated><id>/feed.xml</id><title type="html">Computational Cognition</title><subtitle>A website on the mathematical principles of artificial and biological cognition, written by a Mila (Quebec AI institute) PhD student.</subtitle><author><name>Ezekiel Williams</name></author><entry><title type="html">Welcome to Computational Cognition!</title><link href="/jekyll/update/2021/09/15/welcome.html" rel="alternate" type="text/html" title="Welcome to Computational Cognition!" /><published>2021-09-15T01:00:00-04:00</published><updated>2021-09-15T01:00:00-04:00</updated><id>/jekyll/update/2021/09/15/welcome</id><content type="html" xml:base="/jekyll/update/2021/09/15/welcome.html">&lt;p&gt;Welcome to my new website! To learn about me, check out the “author” page; to learn about the website, check out “about”; to contact me or follow me on social media, check out the site footer. First blog post to come soon :)&lt;/p&gt;</content><author><name>Ezekiel Williams</name></author><category term="jekyll" /><category term="update" /><summary type="html">Welcome to my new website! To learn about me, check out the “author” page; to learn about the website, check out “about”; to contact me or follow me on social media, check out the site footer. First blog post to come soon :)</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-02-11T12:39:06-05:00</updated><id>/feed.xml</id><title type="html">Computational Cognition</title><subtitle>A website on the mathematical principles of artificial and biological cognition, written by a Mila (Quebec AI institute) PhD student.</subtitle><author><name>Ezekiel Williams</name></author><entry><title type="html">Welcome to Computational Cognition!</title><link href="/jekyll/update/2021/09/15/welcome.html" rel="alternate" type="text/html" title="Welcome to Computational Cognition!" /><published>2021-09-15T01:00:00-04:00</published><updated>2021-09-15T01:00:00-04:00</updated><id>/jekyll/update/2021/09/15/welcome</id><content type="html" xml:base="/jekyll/update/2021/09/15/welcome.html">&lt;p&gt;Welcome to my new website! To learn about me, check out the “author” page; to learn about the website, check out “about”; to contact me or follow me on social media, check out the site footer. First blog post to come soon :)&lt;/p&gt;</content><author><name>Ezekiel Williams</name></author><category term="jekyll" /><category term="update" /><summary type="html">Welcome to my new website! To learn about me, check out the “author” page; to learn about the website, check out “about”; to contact me or follow me on social media, check out the site footer. First blog post to come soon :)</summary></entry><entry><title type="html">Energy Based Models I - Introduction</title><link href="/jekyll/update/2021/09/10/bp1.html" rel="alternate" type="text/html" title="Energy Based Models I - Introduction" /><published>2021-09-10T21:10:02-04:00</published><updated>2021-09-10T21:10:02-04:00</updated><id>/jekyll/update/2021/09/10/bp1</id><content type="html" xml:base="/jekyll/update/2021/09/10/bp1.html">&lt;h2 id=&quot;welcome-to-computational-cognition&quot;&gt;Welcome to Computational Cognition&lt;/h2&gt;
+
+&lt;p&gt;Very excited to start blogging! Check out the About page to learn the purpose of this blog and its intended audience(s), and the Author page to learn about me.&lt;/p&gt;
+
+&lt;h1 id=&quot;mini-series-on-energy-based-models&quot;&gt;Mini-Series on Energy Based Models&lt;/h1&gt;
+
+&lt;p&gt;I am starting this blog with a mini-series of posts on Energy Based Models (EBMs). The profound impact of Energy Based Models (EBMs) on neuroscience and artificial intelligence, along with their mathematical elegance, are reason enough to make them the opening topic. However, I am further motivated to write on this topic because the literature on EBMs bridges many cool domains (will elaborate on these in future posts), there is a revived interest in this class of models\(^{1,2}\), and they are highly relevant to my own PhD work. There were also several questions related to EBM resources at the recent &lt;a href=&quot;https://www.main2021.org/&quot;&gt;Montreal AI and Neuroscience (MAIN) conference&lt;/a&gt;. Perhaps the MAIN attendees behind these questions will find some insight on Computational Cognition :)&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-read-this-blog&quot;&gt;How to Read This Blog&lt;/h1&gt;
+
+&lt;p&gt;My blog posts will be composed of self-contained modules, each module being geared towards readers who want less, or more, mathematical detail. As such, I intend this to be a choose-your-own adventure where you can pick out what you want to learn. I also aim to make each blog post &lt;em&gt;short&lt;/em&gt;, only 2-3 pages including figures, so that even if you read the whole thing you can do it over half a cup of coffee.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-are-energy-based-models&quot;&gt;What are Energy Based Models?&lt;/h2&gt;
+
+&lt;center&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;https://zek3r.github.io/assets/bp1/fig1.png&quot; title=&quot;i am artist&quot; /&gt;
+    &lt;figcaption&gt; &lt;b&gt;Memories are as low points in the energy function:&lt;/b&gt; An energy function (red line) storing two memories as low points (blue arrow and yellow arrow). Blue/yellow highlight on x-axis denote model states that are associated with blue/yellow memory (attractor basins), and blue/yellow highlighted red line denote related portions of energy function. Y-axis is energy; x-axis is system state.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/center&gt;
+
+&lt;p&gt;An EBM is a mathematical object that uses an energy function (described below) to perform various cognitive tasks. These tasks could include learning, storing and retrieving memories, or representing a probability distribution (I call the latter a cognitive task because the brain can do this at least approximately–see Pouget et al. 2013\(^3\)). In the context of neural-ai, EBMs are usually a form of artificial neural network. In addition to being a mathematical model for biological neural circuits, EBMs have many applications in AI, including image recognition\(^4\), language modelling (if one views transformers as EBMs\(^2\)), and robotics\(^5\)}. EBMs can be divided into two classes: deterministic, lacking randomness, and stochastic, using randomness to perform computations. Today’s blog post will introduce the two categories of EBMs.&lt;/p&gt;
+
+&lt;h1 id=&quot;intuitive-description&quot;&gt;Intuitive Description&lt;/h1&gt;
+&lt;p&gt;A deterministic EBM is composed of two parts: a system (e.g. ball rolling on an uneven surface) that can take on any configuration from a set of states (e.g. position of the ball on the surface), and an energy function (e.g. the negative of the potential energy of the ball), that assigns a value, the energy, to each configuration of the system. &lt;strong&gt;A good intuition is to think of the system states as points on a topographical map and the energy function as representing the elevation of each point&lt;/strong&gt;. The system ‘prefers’ to be in states of low energy just as a rock prefers to roll downhill. To store memories, one manipulates the energy function (the contours of the topographic map) so that the state that you want to memorize is at the bottom of a basin in the function and the system states you wish to associate with, or use to evoke, the memory are all inside of the basin. Then, to recall the memory from a memory-evoking state all you have to do is slide down the function, from the location of the evoking-memory, to the bottom of the basin, the location of the evoked memory. You can store multiple memories by making multiple, non-overlapping basins in your energy function. If this all seems too abstract, I wrote a mini story to help with deterministic EBM intuition (see bonus material!).&lt;/p&gt;
+
+&lt;center&gt;
+&lt;figure&gt;
+    &lt;img src=&quot;https://zek3r.github.io/assets/bp1/fig2.png&quot; title=&quot;cool&quot; /&gt;
+    &lt;figcaption&gt; &lt;b&gt;Recalling a memory is done by following the energy function &apos;downhill&apos;:&lt;/b&gt; Given a starting state (white triangle), associated with a point on the energy function (white arrow), the dynamics of the EBM (green arrows by x-axis) follow the energy function &apos;downhill&apos; (green arrows by energy function) to find the memory state (blue triangle), associated with the low point on the energy function (blue arrow), resulting in memory recall. Everything else is as in the previous figure.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/center&gt;
+
+&lt;p&gt;A stochastic EBM uses system and energy function in the same way as the deterministic one; the difference is the way in which the system transitions from one state to another. Given a starting state (position on the topographic map) of the system, the deterministic EBM will always move downhill to low points. Conversely, the stochastic system contains a little randomness: on average it will prefer to spend time in lower energy states but it will sometimes transition to higher states. The physical analogy here is to imagine 3D printing your topographic map so that it forms a surface with little hills and valleys on it. Now imagine shaking the map. The rock will usually stay in the valleys of the 3D map but it will jump around in a random-looking fashion as you shake it and will sometimes move up a hill or out of one valley and into another.&lt;/p&gt;
+
+&lt;h1 id=&quot;mathematical-description&quot;&gt;Mathematical Description&lt;/h1&gt;
+
+&lt;p&gt;Assume you have a model system parameterized by a vector \(w \in \mathbb{R}^p\) and taking values in \(\mathbb{R}^n\). An energy based model is one that uses an energy function \(E : \mathbb{R}^n \times \mathbb{R}^p \mapsto \mathbb{R}\), to map model states (these could be inputs, outputs, and latent variables in the case of a neural network) to a single, scalar, energy value. A deterministic EBM is a dynamical system on \(\mathbb{R}^n\) such that for \(s \in \mathbb{R}_{\geq 0}\) or \(\in \mathbb{N}\) and \(\{x_t\}_{t \in \Omega}\) (where \(\Omega\) could be \(\mathbb{R}\) or \(\mathbb{Z}\)), \(E(x_t) \geq E(x_{t + s})\). For example, if \(E\) is differentiable in \(x\), one could take the dynamics to simply descend the gradient of the energy function&lt;/p&gt;
+
+&lt;p&gt;\begin{align}
+    x_{t+1}^{(i)} = x_t^{(i)} -\eta \frac{\partial E(x_t, w)}{\partial x_t^{(i)}}, \quad \quad \quad
+    \dot{x}^{(i)} \propto - \frac{\partial E(x, w)}{\partial x^{(i)}}
+\end{align}&lt;/p&gt;
+
+&lt;p&gt;for the descrete and continuous time cases respectively, where \(\eta \in \mathbb{R}\) is a parameter and \(i \in \{1,...,n\}\) denotes an entry in the vector \(x\). The energy function is thus a Lyapunov function for the EBM’s dynamical system.&lt;/p&gt;
+
+&lt;p&gt;Note that the above definition of the deterministic EBM could be considered restrictive: certain machine learning algorithms that don’t explicitly use energy functions to store and dynamically retrieve memories could still be seen as implicitly shaping an energy function, related to the loss function, during training. See cited tutorial for details\(^6\).&lt;/p&gt;
+
+&lt;p&gt;A stochastic EBM replaces the dynamical system with a probability distribution such that the model system samples states randomly. Hypothetically, given the energy function, one could define a probability distribution in any number of ways. In the literature the probability distribution is almost always taken to be the Gibbs distribution associated with the energy function:&lt;/p&gt;
+
+&lt;p&gt;\begin{align}
+    p(x; w) &amp;amp;= \frac{1}{Z}\exp^{-\beta E(x,w)}
+\end{align}&lt;/p&gt;
+
+&lt;p&gt;where \(Z\) is the appropriate partition function and \(\beta\) is a parameter with the physical meaning of inverse temperature. This makes sense because as \(\beta\) increases the probability distribution becomes more and more peaked around values of low energy until, at zero temperature (\(\beta = \infty\)) the probability distribution becomes a dirac at the low point of the energy function, just as a physical system at zero energy would exhibit zero movement.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;So far I have introduced the notion of deterministic and stochastic EBMs and of recalling previously learned memories. The next blog post will describe the two classic neural-ai EBMs–the deterministic Hopfield model and the stochastic Boltzmann machine–before discussing how a memory can be &lt;em&gt;learned&lt;/em&gt;. \(\sim\) Zeke&lt;/p&gt;
+
+&lt;h2 id=&quot;bonus-material&quot;&gt;Bonus Material&lt;/h2&gt;
+
+&lt;h1 id=&quot;brief-history&quot;&gt;Brief History&lt;/h1&gt;
+
+&lt;p&gt;EBMs were first studied outside the neural-ai domain, in mathematical physics. The classical example of this is the Ising model, a model of the interactions between atoms in a magnetic substance\(^7\). William Little introduced EBMs to neuroscience (to my knowledge this is the first appearance of EBMs in neural-ai–email me if you know otherwise!) by noting connections between the Ising model and neural networks for memory in 1974\(^8\). This notion was further developed and popularized by John Hopfield in 1982\(^9\), after which EBMs were heavily studied in both neuroscience and AI until the early 2000s (see, e.g. work by Hinton and others\(^{10,11}\)). Around this time, difficulties with training large EBMs (EBMs with many neurons) relegated them to a more pedagogical role in the fields, but recent advances in training\(^1\) coupled with connections to state-of-the-art machine learning models\(^2\) has ushered in a renewed interest in this classic model in recent times.&lt;/p&gt;
+
+&lt;h1 id=&quot;of-ebms-and-amphibians&quot;&gt;Of EBMs and Amphibians&lt;/h1&gt;
+&lt;p&gt;Imagine you are a stylish toad. Every Saturday you need to remember that it’s time to start dressin’ in preparation for a night on the town. However, you are lackadaisical and hate to have to remember much, let alone what weekday it is. Your friend frog is a phenomenal meteorologist and tells you that a single rain drop will fall on your Lily pad every Saturday in roughly the same region that a rain drop fell last Saturday. You’ll never forget the position of last Saturday’s rain drop (last Saturday was quite memorable), but you don’t want to have to associate the sight of a droplet at any other point on your lily pad with the memory of last week’s drop (way too much to remember). If only the rain would always fall on last Saturday’s spot, than you could just remember that a rain drop at that location means it’s time to start dressin’! Thankfully, you are well versed in AI: you press down on your lily pad around the region where last Saturday’s drop fell, making a little depression. Now, when the rain drop falls near your memory of last Saturday’s drop, the shape of the pad will make the drop run down to the position of your memory, telling you it’s Saturday! You just turned your lily pad into an energy based model to associate the stimuli of the rain drop at different parts of your pad with your memory that it’s time to start dressin’. The system state is given by the position of the rain drop and the energy function is given by the shape of the lily pad.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Du, Y. &amp;amp; Mordatch, I. Implicit generation and generalization in energy-based models. (2019)&lt;/li&gt;
+  &lt;li&gt;Ramsauer, H.et al.Hopfield networks is all you need. (2020)&lt;/li&gt;
+  &lt;li&gt;Pouget, A., Beck, J. M., Ma, W. J. &amp;amp; Latham, P. E. Probabilistic brains: knowns and unknowns. (2013)&lt;/li&gt;
+  &lt;li&gt;Fischer, A. &amp;amp; Igel, C. Training restricted Boltzmann machines: An introduction. (2014)&lt;/li&gt;
+  &lt;li&gt;Haarnoja, T., Tang, H., Abbeel, P. &amp;amp; Levine, S. Reinforcement learning with deep energy-based policies. (2017)&lt;/li&gt;
+  &lt;li&gt;LeCun, Y., Chopra, S., Hadsell, R., Ranzato, M. &amp;amp; Huang, F. A tutorial on energy-basedlearning. (2006)&lt;/li&gt;
+  &lt;li&gt;Brush, S. G. History of the Lenz-Ising model. (1967)&lt;/li&gt;
+  &lt;li&gt;Little, W. A. The existence of persistent states in the brain. (1974)&lt;/li&gt;
+  &lt;li&gt;Hopfield, J. J. Neural networks and physical systems with emergent collective computational abilities. (1982)&lt;/li&gt;
+  &lt;li&gt;Ackley, D. H., Hinton, G. E. &amp;amp; Sejnowski, T. J. A learning algorithm for Boltzmann machines. (1985)&lt;/li&gt;
+  &lt;li&gt;Hinton, G. E. Training products of experts by minimizing contrastive divergence. (2002)&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Ezekiel Williams</name></author><category term="jekyll" /><category term="update" /><summary type="html">Welcome to Computational Cognition</summary></entry><entry><title type="html">Energy Based Models II - Hopfield Network</title><link href="/jekyll/update/2021/01/01/bp2.html" rel="alternate" type="text/html" title="Energy Based Models II - Hopfield Network" /><published>2021-01-01T20:10:02-05:00</published><updated>2021-01-01T20:10:02-05:00</updated><id>/jekyll/update/2021/01/01/bp2</id><content type="html" xml:base="/jekyll/update/2021/01/01/bp2.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;This is the second blog post in a mini-series on Energy Based Models (EBMs). In today’s post I will describe the classic deterministic EBM studied in neural-ai: the Hopfield model. This will ground the previous, introduction to EBMs, blog post in a concrete example and build on the last post by discussing not only how memories are retrieved but how they might be learned.&lt;/p&gt;
+
+&lt;h2 id=&quot;hopfield-model---intuition&quot;&gt;Hopfield Model - Intuition&lt;/h2&gt;
+
+&lt;p&gt;As with any artificial neural network, the Hopfield model can be conceptualized as a collection of neurons, which process information, connected to one another by synapses, which transmit information from neuron to neuron. The core components of the network are the neuron activations, a list (vector) of numbers, one for each neuron, describing how active a given neuron is at the given moment, another list (matrix) of numbers containing the strength of every connection in the network, and, lastly, a third list (vector) of numbers that gives the baseline activity of each neuron (which can alternatively be viewed as a constant input to each neuron). As with any mathematical model, the Hopfield model makes a bunch of abstractions; these are simplifications that only partially capture the features of a real biological network, made so that one can construct a concise mathematical description that is tractable (can actually be analyzed).&lt;/p&gt;
+
+&lt;h1 id=&quot;model-structure-and-connections-to-biology&quot;&gt;Model Structure and Connections to Biology&lt;/h1&gt;
+
+&lt;p&gt;Diving deeper into the structure of the model, the first thing to note is that it is recurrent, meaning that there are loops in the connection pattern between the neurons such that if you follow the synapses leading out of one neuron you could eventually trace a path back to that same neuron through other synapses. This is true to form biologically because many brain circuits are recurrent. The pattern of connections, or &lt;em&gt;connectivity&lt;/em&gt;, in the model is symmetric, meaning that if neuron \(a\) has a synapse leading to neuron \(b\), neuron \(b\) has a connection of equal strength leading to neuron \(a\). This does not necessarily occur biologically, but simplifies the mathematical analysis in a big way (see Chapter 7 of Dayan and Abbott - CITE). Notably, the Hopfield network fails to satisfy Dale’s law (CITE): the synapses leading out of a neuron can be inhibitory, decreasing the activity of the downstream, post-synaptic, neuron or excitatory, increasing its activity. In the brain, neurons can only be excitatory or inhibitory, but not both (as with everything there is actually an exception to this rule (CITE)). At the single neuron level, a each neuron linearly sums the inputs it receives from other neurons, a ubiquitous modelling choice in artificial neural networks that, again, frequently fails to hold true in the brain (CITE nonlinear summation). Finally, the network activations can only take two values: $1$, meaning the neuron is firing an action potential, or $-1$, meaning it is at rest. The AI community usually replaces $-1$ with $0$, a difference that affects the math in a minor way (as I will discuss below) but not the behaviour of the network. In spite of the many simplifications inherent in the Hopfield model, it has provided a wealth of theoretical insights that have driven forward the fields of neuroscience and AI (CITE).&lt;/p&gt;
+
+&lt;h1 id=&quot;retrieving-memories&quot;&gt;Retrieving Memories&lt;/h1&gt;
+
+&lt;p&gt;As an EBM, the Hopfield model takes an initial network state–a set of neuron activations (recall this is a list of \(1\)s and \(-1\)s denoting which neurons are active and which aren’t)–and iteratively updates this network state by changing the activations of the neurons in such a way as to slide down the contour of the energy function, retrieving a previously stored memory. Thus, through updates, the initial network state is associated with the stored memory, the state that the system converges to. A single neuron updates its state by summing its own constant input (its baseline activity) and the input provided to it by all the other neurons with which it is connected. The latter input is given by a sum over the connected neurons’ activations, with each activation weighted according to the strength of the connection between the given neuron and the neuron who’s activity we are updating. For example, if the neuron we wish to update is connected with neuron \(a\) and neuron \(b\) only, neuron \(a\) has activity \(1\), neuron \(b\) has activity \(-1\), and the weights (synaptic strengths) between these neurons and the updating neuron are \(1/2\) and \(1/4\) respectively, the input to the updating neuron will be \(1/2 \times 1 + 1/4 \times (-1) = 1/4\). To update the entire network, one can either update all neurons at once or a single neuron at a time, referred to as &lt;em&gt;synchronous&lt;/em&gt; and &lt;em&gt;asynchronous&lt;/em&gt; updating respectively. It can be shown that, through performing these updates, the network will eventually converge to a &lt;em&gt;fixed point&lt;/em&gt; (CITE), meaning that if one applies the update rule again it will not change the pattern of activations. This fixed point is a low point of the energy function and, thus, represents a stored memory.&lt;/p&gt;
+
+&lt;h1 id=&quot;learning-memories&quot;&gt;Learning Memories&lt;/h1&gt;
+
+&lt;p&gt;At this point I have described the network structure and how to retreive memories. The natural follow up question is how to learn a memory; stated alternatively, how to embed a low point in the energy function of the Hopfield network. Just like in the brain, memories are stored in the strengths of the connections between the neurons, which makes sense as the synapses control how information is passed between neurons in the network and, thus, the path that the updates in the network will follow towards a fixed point in the retrieval process. To “learn” a single memory, the network connection strengths are changed so that each is equal to the product of the activations of the two connected neurons, when the network activations are set to the memory pattern. If two neurons have equal activations for the memory pattern then the synapse strength between them will be $1$; if they have opposite activations the synapse strength will be $-1$. To store more than one memory, one simply takes the average over the synapse strengths dictated by each of the memories one wishes to store. This learning rule might sound familiar to those who have taken a first year psych or neuroscience course, as it dictates that neurons that have the same activations for many memories will have “strong”, positive, synapses while neurons that tend to have opposing patterns for many memories will have “weak”, negative, synapses. Stated more concisely, this is the classic Hebbian learning rule: “neurons that fire together wire together” (CITE).&lt;/p&gt;
+
+&lt;h2 id=&quot;hopfield-model---math&quot;&gt;Hopfield Model - Math&lt;/h2&gt;
+
+&lt;p&gt;The Hopfield network is a network of \(N\) neurons with activations (see above section) given by \(x \in \{1, -1\}^n\) (the set of all \(n\)-dimensional vectors of \(1\) and \(-1\)). Assume the neurons are connected by synapses in an undirected graph structure such that the strength of the connection from neuron \(j\) to neuron \(i\) is the \(i\)-\(j^\mathrm{th}\) element of the matrix \(W\). Let neuron \(j\), \(j \in \mathbb{R}^N\), have a fixed baseline firing rate (perhaps given by a constant input), defined by the \(j^\mathrm{th}\) element of the vector \(b \in \mathbb{R}^N\). Finally, we denote the sign function \(\sigma : \mathbb{R} \mapsto \mathbb{R}\) by&lt;/p&gt;
+
+\[\sigma(x_j) = 
+    \begin{cases} 
+      \:\:\: 1 &amp;amp; x_j \geq 0  \\
+      -1 &amp;amp; x_j &amp;lt; 0 \\
+   \end{cases}.\]
+
+&lt;p&gt;In an abuse of notation we will apply \(\sigma\) to vectors, by which we mean that the function is applied element-wise.&lt;/p&gt;
+
+&lt;p&gt;With the above notation, the Hopfield network admits the following energy function&lt;/p&gt;
+
+&lt;p&gt;\begin{align}
+    E(x) = - \sum_{i, j} x_i W_{ij} x_j - \sum_j x_j b_j.
+\end{align}&lt;/p&gt;
+
+&lt;p&gt;The astute reader will notice that, for appropriate choices of \(W\) and \(b\), this energy function can be viewed as a second order Taylor approximation of any twice differentiable function mapping \(\mathbb{R}^n\) to \(\mathbb{R}\). Noting that the gradient of a first or zeroth order Taylor approximation would yield unchanging dynamics, it becomes clear that the Hopfield model is effectively the simplest, if we take “simple” to mean having the lowest order energy function, EBM yielding nontrivial dynamics.&lt;/p&gt;
+
+&lt;p&gt;The dynamics of the EBM are given by&lt;/p&gt;
+
+\[x_{t+1}^i = \sigma\Big(\sum_j W_{ij}x_t^j + b_i\Big),\]
+
+&lt;p&gt;where \(t \in \mathbb{Z}\), we have used subscript to denote time and superscript neuron index.&lt;/p&gt;
+
+&lt;p&gt;Lastly, to embed \(M\) memories, \(\{v_m\}_{m \in \{1,...,M\}}\) in the energy function one defines the weight matrix as follows:&lt;/p&gt;
+
+\[W = \frac{1}{M}\sum_{m=1}^M x_m x_m^\top,\]
+
+&lt;p&gt;that is, one takes the average of the outer products of the state vectors representing memories.&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;In the last blog post we introduced EBMs, and their deterministic and stochastic flavours, and in this post we explored a classic example of a deterministic EBM. The next blog post will discuss the classic stochastic EBM known as the Boltzmann machine. As we will see, these two models are two sides of the same coin in so far as they are deterministic and non-deterministic versions of exactly the same neural network architecture. \(\sim\) Zeke&lt;/p&gt;
+
+&lt;h2 id=&quot;bonus-material&quot;&gt;Bonus Material&lt;/h2&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Du, Y. &amp;amp; Mordatch, I. Implicit generation and generalization in energy-based models. (2019)&lt;/li&gt;
+  &lt;li&gt;Ramsauer, H.et al.Hopfield networks is all you need. (2020)&lt;/li&gt;
+  &lt;li&gt;Pouget, A., Beck, J. M., Ma, W. J. &amp;amp; Latham, P. E. Probabilistic brains: knowns and unknowns. (2013)&lt;/li&gt;
+  &lt;li&gt;Fischer, A. &amp;amp; Igel, C. Training restricted Boltzmann machines: An introduction. (2014)&lt;/li&gt;
+  &lt;li&gt;Haarnoja, T., Tang, H., Abbeel, P. &amp;amp; Levine, S. Reinforcement learning with deep energy-based policies. (2017)&lt;/li&gt;
+  &lt;li&gt;LeCun, Y., Chopra, S., Hadsell, R., Ranzato, M. &amp;amp; Huang, F. A tutorial on energy-basedlearning. (2006)&lt;/li&gt;
+  &lt;li&gt;Brush, S. G. History of the Lenz-Ising model. (1967)&lt;/li&gt;
+  &lt;li&gt;Hopfield, J. J. Neural networks and physical systems with emergent collective computational abilities. (1982)&lt;/li&gt;
+  &lt;li&gt;Ackley, D. H., Hinton, G. E. &amp;amp; Sejnowski, T. J. A learning algorithm for Boltzmann machines. (1985)&lt;/li&gt;
+  &lt;li&gt;Hinton, G. E. Training products of experts by minimizing contrastive divergence. (2002)&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Ezekiel Williams</name></author><category term="jekyll" /><category term="update" /><summary type="html">Introduction</summary></entry></feed>

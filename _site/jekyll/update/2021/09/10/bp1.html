@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Energy Based Models I - Introduction | Computational Cognition</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Energy Based Models I - Introduction" />
+<meta name="author" content="Ezekiel Williams" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Welcome to Computational Cognition" />
+<meta property="og:description" content="Welcome to Computational Cognition" />
+<link rel="canonical" href="/jekyll/update/2021/09/10/bp1.html" />
+<meta property="og:url" content="/jekyll/update/2021/09/10/bp1.html" />
+<meta property="og:site_name" content="Computational Cognition" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-09-10T21:10:02-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Energy Based Models I - Introduction" />
+<script type="application/ld+json">
+{"datePublished":"2021-09-10T21:10:02-04:00","description":"Welcome to Computational Cognition","dateModified":"2021-09-10T21:10:02-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"/jekyll/update/2021/09/10/bp1.html"},"url":"/jekyll/update/2021/09/10/bp1.html","author":{"@type":"Person","name":"Ezekiel Williams"},"@type":"BlogPosting","headline":"Energy Based Models I - Introduction","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/css/academicons.min.css"/>
+  <link rel="shortcut icon" type="image/png" href="/assets/cc_jthanew.png"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Computational Cognition" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper">
+  <!---
+  	<img src="cc_jthanew.png" alt="title", width="25">
+  	---><a class="site-title" rel="author" href="/">Computational Cognition</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/author/">Author</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Energy Based Models I - Introduction</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-09-10T21:10:02-04:00" itemprop="datePublished">Sep 10, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="welcome-to-computational-cognition">Welcome to Computational Cognition</h2>
+
+<p>Very excited to start blogging! Check out the About page to learn the purpose of this blog and its intended audience(s), and the Author page to learn about me.</p>
+
+<h1 id="mini-series-on-energy-based-models">Mini-Series on Energy Based Models</h1>
+
+<p>I am starting this blog with a mini-series of posts on Energy Based Models (EBMs). The profound impact of Energy Based Models (EBMs) on neuroscience and artificial intelligence, along with their mathematical elegance, are reason enough to make them the opening topic. However, I am further motivated to write on this topic because the literature on EBMs bridges many cool domains (will elaborate on these in future posts), there is a revived interest in this class of models\(^{1,2}\), and they are highly relevant to my own PhD work. There were also several questions related to EBM resources at the recent <a href="https://www.main2021.org/">Montreal AI and Neuroscience (MAIN) conference</a>. Perhaps the MAIN attendees behind these questions will find some insight on Computational Cognition :)</p>
+
+<h1 id="how-to-read-this-blog">How to Read This Blog</h1>
+
+<p>My blog posts will be composed of self-contained modules, each module being geared towards readers who want less, or more, mathematical detail. As such, I intend this to be a choose-your-own adventure where you can pick out what you want to learn. I also aim to make each blog post <em>short</em>, only 2-3 pages including figures, so that even if you read the whole thing you can do it over half a cup of coffee.</p>
+
+<h2 id="what-are-energy-based-models">What are Energy Based Models?</h2>
+
+<center>
+<figure>
+    <img src="https://zek3r.github.io/assets/bp1/fig1.png" title="i am artist" />
+    <figcaption> <b>Memories are as low points in the energy function:</b> An energy function (red line) storing two memories as low points (blue arrow and yellow arrow). Blue/yellow highlight on x-axis denote model states that are associated with blue/yellow memory (attractor basins), and blue/yellow highlighted red line denote related portions of energy function. Y-axis is energy; x-axis is system state.</figcaption>
+</figure>
+</center>
+
+<p>An EBM is a mathematical object that uses an energy function (described below) to perform various cognitive tasks. These tasks could include learning, storing and retrieving memories, or representing a probability distribution (I call the latter a cognitive task because the brain can do this at least approximately–see Pouget et al. 2013\(^3\)). In the context of neural-ai, EBMs are usually a form of artificial neural network. In addition to being a mathematical model for biological neural circuits, EBMs have many applications in AI, including image recognition\(^4\), language modelling (if one views transformers as EBMs\(^2\)), and robotics\(^5\)}. EBMs can be divided into two classes: deterministic, lacking randomness, and stochastic, using randomness to perform computations. Today’s blog post will introduce the two categories of EBMs.</p>
+
+<h1 id="intuitive-description">Intuitive Description</h1>
+<p>A deterministic EBM is composed of two parts: a system (e.g. ball rolling on an uneven surface) that can take on any configuration from a set of states (e.g. position of the ball on the surface), and an energy function (e.g. the negative of the potential energy of the ball), that assigns a value, the energy, to each configuration of the system. <strong>A good intuition is to think of the system states as points on a topographical map and the energy function as representing the elevation of each point</strong>. The system ‘prefers’ to be in states of low energy just as a rock prefers to roll downhill. To store memories, one manipulates the energy function (the contours of the topographic map) so that the state that you want to memorize is at the bottom of a basin in the function and the system states you wish to associate with, or use to evoke, the memory are all inside of the basin. Then, to recall the memory from a memory-evoking state all you have to do is slide down the function, from the location of the evoking-memory, to the bottom of the basin, the location of the evoked memory. You can store multiple memories by making multiple, non-overlapping basins in your energy function. If this all seems too abstract, I wrote a mini story to help with deterministic EBM intuition (see bonus material!).</p>
+
+<center>
+<figure>
+    <img src="https://zek3r.github.io/assets/bp1/fig2.png" title="cool" />
+    <figcaption> <b>Recalling a memory is done by following the energy function 'downhill':</b> Given a starting state (white triangle), associated with a point on the energy function (white arrow), the dynamics of the EBM (green arrows by x-axis) follow the energy function 'downhill' (green arrows by energy function) to find the memory state (blue triangle), associated with the low point on the energy function (blue arrow), resulting in memory recall. Everything else is as in the previous figure.</figcaption>
+</figure>
+</center>
+
+<p>A stochastic EBM uses system and energy function in the same way as the deterministic one; the difference is the way in which the system transitions from one state to another. Given a starting state (position on the topographic map) of the system, the deterministic EBM will always move downhill to low points. Conversely, the stochastic system contains a little randomness: on average it will prefer to spend time in lower energy states but it will sometimes transition to higher states. The physical analogy here is to imagine 3D printing your topographic map so that it forms a surface with little hills and valleys on it. Now imagine shaking the map. The rock will usually stay in the valleys of the 3D map but it will jump around in a random-looking fashion as you shake it and will sometimes move up a hill or out of one valley and into another.</p>
+
+<h1 id="mathematical-description">Mathematical Description</h1>
+
+<p>Assume you have a model system parameterized by a vector \(w \in \mathbb{R}^p\) and taking values in \(\mathbb{R}^n\). An energy based model is one that uses an energy function \(E : \mathbb{R}^n \times \mathbb{R}^p \mapsto \mathbb{R}\), to map model states (these could be inputs, outputs, and latent variables in the case of a neural network) to a single, scalar, energy value. A deterministic EBM is a dynamical system on \(\mathbb{R}^n\) such that for \(s \in \mathbb{R}_{\geq 0}\) or \(\in \mathbb{N}\) and \(\{x_t\}_{t \in \Omega}\) (where \(\Omega\) could be \(\mathbb{R}\) or \(\mathbb{Z}\)), \(E(x_t) \geq E(x_{t + s})\). For example, if \(E\) is differentiable in \(x\), one could take the dynamics to simply descend the gradient of the energy function</p>
+
+<p>\begin{align}
+    x_{t+1}^{(i)} = x_t^{(i)} -\eta \frac{\partial E(x_t, w)}{\partial x_t^{(i)}}, \quad \quad \quad
+    \dot{x}^{(i)} \propto - \frac{\partial E(x, w)}{\partial x^{(i)}}
+\end{align}</p>
+
+<p>for the descrete and continuous time cases respectively, where \(\eta \in \mathbb{R}\) is a parameter and \(i \in \{1,...,n\}\) denotes an entry in the vector \(x\). The energy function is thus a Lyapunov function for the EBM’s dynamical system.</p>
+
+<p>Note that the above definition of the deterministic EBM could be considered restrictive: certain machine learning algorithms that don’t explicitly use energy functions to store and dynamically retrieve memories could still be seen as implicitly shaping an energy function, related to the loss function, during training. See cited tutorial for details\(^6\).</p>
+
+<p>A stochastic EBM replaces the dynamical system with a probability distribution such that the model system samples states randomly. Hypothetically, given the energy function, one could define a probability distribution in any number of ways. In the literature the probability distribution is almost always taken to be the Gibbs distribution associated with the energy function:</p>
+
+<p>\begin{align}
+    p(x; w) &amp;= \frac{1}{Z}\exp^{-\beta E(x,w)}
+\end{align}</p>
+
+<p>where \(Z\) is the appropriate partition function and \(\beta\) is a parameter with the physical meaning of inverse temperature. This makes sense because as \(\beta\) increases the probability distribution becomes more and more peaked around values of low energy until, at zero temperature (\(\beta = \infty\)) the probability distribution becomes a dirac at the low point of the energy function, just as a physical system at zero energy would exhibit zero movement.</p>
+
+<p> </p>
+
+<p>So far I have introduced the notion of deterministic and stochastic EBMs and of recalling previously learned memories. The next blog post will describe the two classic neural-ai EBMs–the deterministic Hopfield model and the stochastic Boltzmann machine–before discussing how a memory can be <em>learned</em>. \(\sim\) Zeke</p>
+
+<h2 id="bonus-material">Bonus Material</h2>
+
+<h1 id="brief-history">Brief History</h1>
+
+<p>EBMs were first studied outside the neural-ai domain, in mathematical physics. The classical example of this is the Ising model, a model of the interactions between atoms in a magnetic substance\(^7\). William Little introduced EBMs to neuroscience (to my knowledge this is the first appearance of EBMs in neural-ai–email me if you know otherwise!) by noting connections between the Ising model and neural networks for memory in 1974\(^8\). This notion was further developed and popularized by John Hopfield in 1982\(^9\), after which EBMs were heavily studied in both neuroscience and AI until the early 2000s (see, e.g. work by Hinton and others\(^{10,11}\)). Around this time, difficulties with training large EBMs (EBMs with many neurons) relegated them to a more pedagogical role in the fields, but recent advances in training\(^1\) coupled with connections to state-of-the-art machine learning models\(^2\) has ushered in a renewed interest in this classic model in recent times.</p>
+
+<h1 id="of-ebms-and-amphibians">Of EBMs and Amphibians</h1>
+<p>Imagine you are a stylish toad. Every Saturday you need to remember that it’s time to start dressin’ in preparation for a night on the town. However, you are lackadaisical and hate to have to remember much, let alone what weekday it is. Your friend frog is a phenomenal meteorologist and tells you that a single rain drop will fall on your Lily pad every Saturday in roughly the same region that a rain drop fell last Saturday. You’ll never forget the position of last Saturday’s rain drop (last Saturday was quite memorable), but you don’t want to have to associate the sight of a droplet at any other point on your lily pad with the memory of last week’s drop (way too much to remember). If only the rain would always fall on last Saturday’s spot, than you could just remember that a rain drop at that location means it’s time to start dressin’! Thankfully, you are well versed in AI: you press down on your lily pad around the region where last Saturday’s drop fell, making a little depression. Now, when the rain drop falls near your memory of last Saturday’s drop, the shape of the pad will make the drop run down to the position of your memory, telling you it’s Saturday! You just turned your lily pad into an energy based model to associate the stimuli of the rain drop at different parts of your pad with your memory that it’s time to start dressin’. The system state is given by the position of the rain drop and the energy function is given by the shape of the lily pad.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li>Du, Y. &amp; Mordatch, I. Implicit generation and generalization in energy-based models. (2019)</li>
+  <li>Ramsauer, H.et al.Hopfield networks is all you need. (2020)</li>
+  <li>Pouget, A., Beck, J. M., Ma, W. J. &amp; Latham, P. E. Probabilistic brains: knowns and unknowns. (2013)</li>
+  <li>Fischer, A. &amp; Igel, C. Training restricted Boltzmann machines: An introduction. (2014)</li>
+  <li>Haarnoja, T., Tang, H., Abbeel, P. &amp; Levine, S. Reinforcement learning with deep energy-based policies. (2017)</li>
+  <li>LeCun, Y., Chopra, S., Hadsell, R., Ranzato, M. &amp; Huang, F. A tutorial on energy-basedlearning. (2006)</li>
+  <li>Brush, S. G. History of the Lenz-Ising model. (1967)</li>
+  <li>Little, W. A. The existence of persistent states in the brain. (1974)</li>
+  <li>Hopfield, J. J. Neural networks and physical systems with emergent collective computational abilities. (1982)</li>
+  <li>Ackley, D. H., Hinton, G. E. &amp; Sejnowski, T. J. A learning algorithm for Boltzmann machines. (1985)</li>
+  <li>Hinton, G. E. Training products of experts by minimizing contrastive divergence. (2002)</li>
+</ol>
+
+
+  </div><a class="u-url" href="/jekyll/update/2021/09/10/bp1.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Computational Cognition</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ezekiel Williams</li><li style="color:yellow"> ezekiel.williams&lt;at&gt;mila.quebec </li><!---<li><i class="ai ai-google-scholar ai-1x"></i> <a href="https://scholar.google.ca/citations?user=KwgL380AAAAJ&hl=en&oi=ao"><span class="username">Publications</span></a></li>---><li><a href="/assets/cv_mar23.pdf">CV</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/zek3r"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">zek3r</span></a></li><li><a href="https://fediscience.org/@ezekiel"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg> <span class="username">ezekiel</span></a></li><li><a href="https://www.twitter.com/zek3r"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">zek3r</span></a></li><li><i class="ai ai-google-scholar ai-1x"></i> <a href="https://scholar.google.ca/citations?user=KwgL380AAAAJ&hl=en&oi=ao"><span class="username">Publications</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A website on the mathematical principles of artificial and biological cognition, written by a Mila (Quebec AI institute) PhD student.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
