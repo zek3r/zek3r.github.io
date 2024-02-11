@@ -14,12 +14,12 @@ At a high level, the research question asked by my MSc paper is *how can we unde
 
 ### The language of brain cells
 
-<p align="center">
-  <img src="/Users/ezekielwilliams/documents/website/zek3r.github.io/assets/msc/blogpost_fig1.jpg" />
-</p>
-
-![Neuron A messages Neuron B](/_drafts/images/blogpost_fig1.jpg)
-*A neuron receives electrical input from other neurons via its 'branches' (known as dendrites) and sends electrical signals to other neurons via its 'trunk' (axon), using a tree analogy. The membrane voltage in the axon of neuron A is plotted as a function of time in the bottom left.*
+<center>
+<figure>
+    <img src="https://zek3r.github.io/assets/msc/blogpost_fig1.jpg" title="i am artist" />
+    <figcaption> <b>Neurons speak in "spikes":</b> A neuron receives electrical input from other neurons via its 'branches' (known as dendrites) and sends electrical signals to other neurons via its 'trunk' (axon), using a tree analogy. The membrane voltage in the axon of neuron A is plotted as a function of time in the bottom left.</figcaption>
+</figure>
+</center>
 
 Your brain is composed of about 86 billion neurons--brain cells which are believed responsible for performing the computations that allow you to see, smell, think, talk, walk, and generally experience cognitive phenomena. To do this, these neurons communicate with each other, kind of like how a group of friends might text eachother to coordinate their work on a school project. However, while text chats are composed of words, neuron conversation is composed of electrical pulses that neuroscientists refer to as *action potentials*, or *"spikes"*.
 
@@ -29,7 +29,14 @@ Modern science doesn't fully understand how to read the neural "spike language".
 
 ### How neuroscientists think about brain cell messages
 
-![Rate codes vs temporal codes](/_drafts/images/blogpost_fig2.pdf)
+<center>
+<figure>
+    <img src="https://zek3r.github.io/assets/msc/blogpost_fig2.jpg" title="what font is this" />
+    <figcaption> <b>Rate vs. temporal codes:</b> For a rate code, the spike sequence in plot A is the same as that of plot B, but not plot C. For a temporal code, the ISI (distance between consecutive spikes) matters (see plot A)</figcaption>
+</figure>
+</center>
+
+![Rate codes vs temporal codes](/_drafts/images/blogpost_fig3.pdf)
 *For a rate code, the spike sequence in plot A is the same as that of plot B, but not plot C. For a temporal code, the ISI (distance between consecutive spikes) matters (see plot A).
 
 There are many theories for how to read the neural language, or "code". These theories can be divided into two categories: **rate codes** and **temporal codes**. Rate code theories say that the only important aspect of the spike messages that a given neuron, neuron 'A', sends to another, neuron 'B', is the *rate* of spikes. If neuron A sends 1 spike every second for 3 seconds, then neuron B will see that neuron A's spike rate is 3 spikes per second, and this will mean something *different* to neuron B than if A had sent neuron B 2 spikes per second during each of the three seconds--a spike rate of 2 spikes per second--but will have the same meaning as if neuron A had send 3 spikes to neuron B in the first second and no spikes in the next two seconds: 3 spikes in 3 seconds gives the same rate no matter which specific times within the three second window the spikes are sent. 
