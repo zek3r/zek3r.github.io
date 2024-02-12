@@ -38,7 +38,7 @@ Modern science doesn't fully understand how to read the neural "spike language".
 
 There are many theories for how to read the neural language, or "code". These theories can be divided into two categories: **rate codes** and **temporal codes**. Rate code theories say that the only important aspect of the spike messages that a given neuron, neuron 'A', sends to another, neuron 'B', is the *rate* of spikes. If neuron A sends 1 spike every second for 3 seconds, then neuron B will see that neuron A's spike rate is 3 spikes per second, and this will mean something *different* to neuron B than if A had sent neuron B 2 spikes per second during each of the three seconds--a spike rate of 2 spikes per second--but will have the same meaning as if neuron A had send 3 spikes to neuron B in the first second and no spikes in the next two seconds: 3 spikes in 3 seconds gives the same rate no matter which specific times within the three second window the spikes are sent. 
 
-Conversely, temporal coding theories say that the relative timing of the spikes does matter: that is, when neuron A sends 3 spikes in the first second this is different than if A had distributed its spikes evenly in time, first spike at second 1, the second spike one second later at second 2, the third two seconds later at second 3. In this way, in a temporal code, when A sends 2 spikes separated by 1 second this would represent a different word than if A had sent B two spikes separated by 2 seconds $^\dagger$ .
+Conversely, temporal coding theories say that the relative timing of the spikes does matter: that is, when neuron A sends 3 spikes in the first second this is different than if A had distributed its spikes evenly in time, first spike at second 1, the second spike one second later at second 2, the third two seconds later at second 3. In this way, in a temporal code, when A sends 2 spikes separated by 1 second this would represent a different word than if A had sent B two spikes separated by 2 seconds $$^\dagger$$ .
 
 My research paper looked at addressing a key question that appears in a certain class of temporal codes--how to resolve ambiguity between spike sequences.
 
@@ -81,13 +81,13 @@ I'm not including the equations in this section as they are bulky and don't prov
 - Neuron B is modelled as a nonlinear function of the linearly filtered spike train of neuron A
 
 ### Info Theory Analysis
-To quantify information transmitted we used the mutual information rate, $\mathbb{I}$, a generalization of mutual information from random varaibles to stochastic processes:
+To quantify information transmitted we used the mutual information rate, $$\mathbb{I}$$, a generalization of mutual information from random varaibles to stochastic processes:
 
 $$
 \mathbb{I}(X, Y) = \lim_{T \to \infty}\frac{1}{T}I(X_{0:T};Y_{0:T}),
 $$
 
-where $X$ and $Y$ are stochastic processes and $I(X_{0:T};Y_{0:T})$ is the mutual information between the vector $X_{0:T} = [X_0, ..., X_T]$ and $Y_{0:T} = [Y_0, ..., Y_T]$.
+where $$X$$ and $$Y$$ are stochastic processes and $$I(X_{0:T};Y_{0:T})$$ is the mutual information between the vector $$X_{0:T} = [X_0, ..., X_T]$$ and $$Y_{0:T} = [Y_0, ..., Y_T]$$.
 
 This quantity is a massive hassle to compute, but one can compute a linear lower-bound for this information rate as:
 
@@ -95,7 +95,7 @@ $$
 -\int_0^{\frac{1}{2}}\log_2\big(1 - \Phi_{XY}(f)\big)\mathrm{d}f,
 $$
 
-where $\Phi_{XY}$(f) is the coherence between $X$ and $Y$ and $f$ is frequency (see [Stein et al.](https://www.cell.com/biophysj/pdf/S0006-3495(72)86087-9.pdf)). We used this to quantify information transmitted in the paper.
+where $$\Phi_{XY}(f)$$ is the coherence between $$X$$ and $$Y$$ and $$f$$ is frequency (see [Stein et al.](https://www.cell.com/biophysj/pdf/S0006-3495(72)86087-9.pdf)). We used this to quantify information transmitted in the paper.
 
 
 ## References
@@ -118,7 +118,7 @@ For further reading on a given topic, see below (papers are author first; textbo
 - [Neural Burst Codes Disguised as Rate Codes](https://www.nature.com/articles/s41598-021-95037-z)
 
 ### In-blog footnotes
-- $\dagger$ : one may notice that the difference between rate and temporal codes is a little more subtle than described above. One could imagine a situation where the stimulus being encoded in the firing rate of cell 'A' changes very quickly, and the downstream cell decoding A's message is very sensitive to each spike. In this case, even with a rate code small differences in spike timing could convey information. In this way, the *real* distinction between rate and temporal codes depends on whether there is information in cell A's spike train at higher frequencies than those of the stimulus that cell A is encoding.
+- $$\dagger$$ : one may notice that the difference between rate and temporal codes is a little more subtle than described above. One could imagine a situation where the stimulus being encoded in the firing rate of cell 'A' changes very quickly, and the downstream cell decoding A's message is very sensitive to each spike. In this case, even with a rate code small differences in spike timing could convey information. In this way, the *real* distinction between rate and temporal codes depends on whether there is information in cell A's spike train at higher frequencies than those of the stimulus that cell A is encoding.
 
 
 &nbsp; &nbsp; &nbsp;
