@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 
 # Decoding the Language of the Brain
-Welcome to my first blog post! My first few posts will be about the peer-review publications that I have contributed to during my Masters and PhD thus far. Today's blog is about my MSc thesis paper: ***Neural Burst Codes Disguised as Rate Codes***, a title which will hopefully make sense by the end of this post!
+Welcome to my first blog post! My first few posts will be about the peer-review publications that I have contributed to during my Masters and PhD thus far. Today's blog is about my MSc thesis paper: ***[Neural Burst Codes Disguised as Rate Codes](https://www.nature.com/articles/s41598-021-95037-z)***, a title which will hopefully make sense by the end of this post!
 
 ## The Big Picture (Background)
 
@@ -51,12 +51,9 @@ My research paper looked at addressing a key question that appears in a certain 
 </figure>
 </center>
 
-![Medium length ISIs can be ambiguous in a burst code!](/_drafts/images/blogpost_fig3.pdf)
-*In plot A, spikes close together--small ISIs--are clearly a burst, spikes far apart--big ISIs--a clearly not a burst, but what about 'medium' ISIs? One can plot the frequency of occurence of a given ISI, or probability of an ISI occurring, for a given cell, as in plots B and C. Plot B shows not very many medium ISIs, so it's unambiguous. Alternatively, plot C has many medium ISIs, so it's very ambiguous!*.
-
 Imagine that you have a temporal code where spikes that occur really close together mean something different from spikes that occur farther apart. This kind of code is called a *burst code* because two or more spikes close together in time--bursts of spikes--mean something different than other, more spread out, spike sequences. Messages sent using this code will be easy to read if spikes only occur *very* far apart--making them clearly non-bursts--or *very* close together--making them clearly bursts. But what if they occur intermediate distances apart? If there is no hard threshold between what is considered a *"burst"* and what isn't, then when neuron A sends neuron B spikes with time gaps of an intermediate length, there will be ambiguity when neuron B tries to understand what neuron A said because it won't know if the spikes were a burst or not. 
 
-    An analogy: imagine two friends, Bob and Alice, and that Bob is listening to Alice. Further imagine that Alice has a short attention span and is very rapidly switching back and forth between telling Bob about a performance of the nut cracker and explaining to Bob why almond milk is less sustainable than oat milk. To make it easier to tell when Alice is describing ballet or milk-alternatives, she talks about the former in french and the latter in english. *However*, there are many words that are the same between english and french, so when Alice says "festival", it may not be clear to Bob whether this is a dance festival or a festival of flavours on the tongue brought on by a tasty milk alternative. These words that are the same in french and english are analogous to the spikes that are of intermediate distance apart, which we can't immediately classify as bursts or non-bursts.
+*An analogy: imagine two friends, Bob and Alice, and that Bob is listening to Alice. Further imagine that Alice has a short attention span and is very rapidly switching back and forth between telling Bob about a performance of the nut cracker and explaining to Bob why almond milk is less sustainable than oat milk. To make it easier to tell when Alice is describing ballet or milk-alternatives, she talks about the former in french and the latter in english. **However**, there are many words that are the same between english and french, so when Alice says "festival", it may not be clear to Bob whether this is a dance festival or a festival of flavours on the tongue brought on by a tasty milk alternative. These words that are the same in french and english are analogous to the spikes that are of intermediate distance apart, which we can't immediately classify as bursts or non-bursts.*
 
 Importantly, experimental evidence shows that these ambiguous, intermediatly-spaced spikes occur frequently in the brain. It is thus an important question for neuroscientists whether neuron B can decode enough of the message from neuron A even with this ambiguity. If not, then neuroscientists will be able to scratch burst codes from the list of possible theories for reading the language of the brain.
 
@@ -78,9 +75,9 @@ For a brief overview of some of the math used, and for some key references, see 
 ## Math Overview
 
 ### Neural Circuit Model
-I'm not including the equations in this section as they are bulky and don't provide too much intution. See (supp of paper) for them.
-- For neuron A, we formulated a new bursting model, the Burst Spike Response Model, inspired by the Spike Response Model of Gerstner et al (cite) and previous work by my MSc supervisor Richard Naud (cite). Mathematically, the model is a point process determined by an event rate and a burst probability: the former determines how often spikes occur and the latter determines whether or not a rapidly-occurring burst spike occurs after the original spike. In neuro-theory language, this is a two compartment model with stochastic spiking, where the first (dendritic) compartment encodes the burst probability and the second somatic compartment encodes the event rate
-- The inputs to neuron A are Ornstein-Uhlenbeck processes
+I'm not including the equations in this section as they are bulky and don't provide too much intution. See the [supp of our paper for them](https://www.nature.com/articles/s41598-021-95037-z).
+- For neuron A, we formulated a new bursting model, the Burst Spike Response Model, inspired by the [Spike Response Model of Gerstner et al](https://en.wikipedia.org/wiki/Spike_response_model) and [previous work](https://www.pnas.org/doi/abs/10.1073/pnas.1720995115) by my MSc supervisor Richard Naud. Mathematically, the model is a point process determined by an event rate and a burst probability: the former determines how often spikes occur and the latter determines whether or not a rapidly-occurring burst spike occurs after the original spike. In neuro-theory language, this is a two compartment model with stochastic spiking, where the first (dendritic) compartment encodes the burst probability and the second somatic compartment encodes the event rate
+- The inputs to neuron A are [Ornstein-Uhlenbeck processes](https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process)
 - Neuron B is modelled as a nonlinear function of the linearly filtered spike train of neuron A
 
 ### Info Theory Analysis
@@ -90,29 +87,38 @@ $$
 \mathbb{I}(X, Y) = \lim_{T \to \infty}\frac{1}{T}I(X_{0:T};Y_{0:T}),
 $$
 
-where $X$ and $Y$ are stochastic processes and $I(X_{0:T};Y_{0:T})$ is the mutual information between the vector $X_{0:T} = [X_0, ..., X_T]$ and $Y_{0:T} = [Y_0, ..., Y_T]$ (CITE).
+where $X$ and $Y$ are stochastic processes and $I(X_{0:T};Y_{0:T})$ is the mutual information between the vector $X_{0:T} = [X_0, ..., X_T]$ and $Y_{0:T} = [Y_0, ..., Y_T]$.
 
-This quantity is a massive hassle to compute (CITE), but one can compute a linear lower-bound for this information rate as:
+This quantity is a massive hassle to compute, but one can compute a linear lower-bound for this information rate as:
 
 $$
 -\int_0^{\frac{1}{2}}\log_2\big(1 - \Phi_{XY}(f)\big)\mathrm{d}f,
 $$
 
-where $\Phi_{XY}$(f) is the coherence between $X$ and $Y$ and $f$ is frequency (CITE). We used this to quantify information transmitted in the paper.
+where $\Phi_{XY}$(f) is the coherence between $X$ and $Y$ and $f$ is frequency (see [Stein et al.](https://www.cell.com/biophysj/pdf/S0006-3495(72)86087-9.pdf)). We used this to quantify information transmitted in the paper.
 
 
 ## References
-For further reading on a given topic, see below:
-- Neural coding (e.g. rate and temporal codes)
+For further reading on a given topic, see below (papers are author first; textbooks are title first):
+- Neural coding:
+    - [Neural Dynamics Ch. 7.6](https://neuronaldynamics.epfl.ch/online/Ch7.S6.html)
+    - [Theunissen & Miller, Temporal encoding in nervous systems: a rigorous definition](https://www.researchgate.net/publication/14678604_Theunissen_F_Miller_J_P_Temporal_encoding_in_nervous_systems_a_rigorous_definition_J_Comput_Neurosci_2_149-162)
+    - [Wikipedia, Neural Coding](https://en.wikipedia.org/wiki/Neural_coding)
 - Burst coding
+    - [Naud & Sprekeler, Sparse bursts optimize information transmission in a multiplexed neural code](https://www.pnas.org/doi/abs/10.1073/pnas.1720995115)
+    - [Krahe & Gabbiani, Burst Firing in Sensory Systems](http://nelson.beckman.illinois.edu/pubs/Krahe_Gabbiani04.pdf)
 - Modelling neurons
+    - [Neural Dynamics](https://neuronaldynamics.epfl.ch/online/index.html)
 - Information theory
+    - [Elements of Information Theory, Cover & Thomas](https://cs-114.org/wp-content/uploads/2015/01/Elements_of_Information_Theory_Elements.pdf)
 - Information theory applied to neuroscience
+    - [Borst & Theunissen, Information Theory and Neural Coding](https://www.cns.nyu.edu/csh/csh06/PDFs/BorstTheuneissenNN1999.pdf)
+    - [Stein et al., The frequency response, coherence, and information capacity of two neuronal models](https://www.cell.com/biophysj/pdf/S0006-3495(72)86087-9.pdf)
+   - [Spikes, by Rieke & Bialek, is great but I don't know of a free pdf](https://mitpress.mit.edu/9780262181747/spikes/)
+- [Neural Burst Codes Disguised as Rate Codes](https://www.nature.com/articles/s41598-021-95037-z)
 
 ### In-blog footnotes
-- $\dagger$ : one may notice that the difference between rate and temporal codes is a little more subtle than described above; in particular, when the precision of the temporal encoding/decoding is sufficiently high. Think of a scenario where the time window over which the decoding cell is estimating spike rates is sufficiently small (e.g. spikes per ms instead of spikes per second), and the encoded signal has sufficiently precise temporal structure. Dispite this similaritiy, rate vs. temporal codes end up being a useful distinction in practice (see refs).
-
-### In-blog references
+- $\dagger$ : one may notice that the difference between rate and temporal codes is a little more subtle than described above. One could imagine a situation where the stimulus being encoded in the firing rate of cell 'A' changes very quickly, and the downstream cell decoding A's message is very sensitive to each spike. In this case, even with a rate code small differences in spike timing could convey information. In this way, the *real* distinction between rate and temporal codes depends on whether there is information in cell A's spike train at higher frequencies than those of the stimulus that cell A is encoding.
 
 
 &nbsp; &nbsp; &nbsp;
