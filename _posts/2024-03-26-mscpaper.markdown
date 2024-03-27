@@ -21,11 +21,11 @@ At a high level, the research question asked by my MSc paper is *how can we unde
 </figure>
 </center>
 
-Your brain is composed of about 86 billion neurons--brain cells which are believed responsible for performing the computations that allow you to see, smell, think, talk, walk, and generally experience cognitive phenomena. To do this, these neurons communicate with each other, kind of like how a group of friends might text eachother to coordinate their work on a school project. However, while text chats are composed of words, neuron conversation is composed of electrical pulses that neuroscientists refer to as *action potentials*, or *"spikes"* (Fig.1).
+Your brain is composed of about 86 billion neurons--brain cells which are believed to be responsible for performing the computations that allow you to see, smell, think, talk, walk, and generally experience cognitive phenomena. To do this, these neurons communicate with each other, kind of like how a group of friends might text eachother to coordinate their work on a school project. However, while text chats are composed of words, neuron conversation is composed of electrical pulses that neuroscientists refer to as *action potentials*, or *"spikes"* (Fig.1).
 
 ### Why we want to decode brain cell messages
 
-Modern science doesn't fully understand how to read the neural "spike language". This is an important problem because if we could decode the spike-written messages between neurons, we would be one big step closer to understanding the brain, and could potential solve medical problems--for example being able to control prosthetic devices just by thinking.
+Modern science doesn't fully understand how to read the neural "spike language". This is an important problem because if we could decode the spike-written messages between neurons, we would be one big step closer to understanding the brain, and could potentially solve medical problems--for example being able to control prosthetic devices just by thinking.
 
 ### How neuroscientists think about brain cell messages
 
@@ -65,11 +65,11 @@ Our specific research question was if neuron A can communicate effectively with 
 ### Our research methods
 
 
-To answer this question, we needed a way of quantifying how well neuron B can decode neuron A's spikes as a function of how much ambiguity there is in A's spike messages. We took a computational approach to answer this question, meaning that we came up with a mathematical model of neurons A and B--a set of equations describing the spikes that A produces and the machinery that B uses to decode those spikes--and analyzed a computer simulation of this model. In this model, we could vary the amount of ambiguity in A's messages. We then used tools from information theory to quantify how well model neuron B could decode model neuron A's messages. Information theory is a branch of mathematical statistics that quantifies the amount of predictability (vs unpredictability, or ambiguity) in a variable object. In particular, information theory can also be used to evaluate how predictive one variable is of another. For example, one pair of variables could be (1) the identity of a card in a deck (e.g. ace of spades) and (2) the colour of the card. The information contained card colour about the identity of the card is not super high (e.g. there are many, 26, cards in a deck that are red). If variable (2) was instead card number/face this would be comparatively more predictive (e.g. there are only 4 kings in a deck, narrowing the options). In our case, variable (1) would be a time-varying signal encoded in the bursty spikes of model neuron A, and variable (2) would be the read-out taken by model neuron B.
+To answer this question, we needed a way of quantifying how well neuron B can decode neuron A's spikes as a function of how much ambiguity there is in A's spike messages. We took a computational approach to answer this question, meaning that we came up with a mathematical model of neurons A and B--a set of equations describing the spikes that A produces and the machinery that B uses to decode those spikes--and analyzed a computer simulation of this model. In this model, we could vary the amount of ambiguity in A's messages. We then used tools from information theory to quantify how well model neuron B could decode model neuron A's messages. Information theory is a branch of mathematical statistics that quantifies the amount of predictability (vs unpredictability, or ambiguity) in a variable object. In particular, information theory can also be used to evaluate how predictive one variable is of another. For example, one pair of variables could be (1) the identity of a card in a deck (e.g. ace of spades) and (2) the colour of the card. The information contained in card colour about the identity of the card is not super high (e.g. there are many, 26, cards in a deck that are red). If variable (2) was instead card number/face this would be comparatively more predictive (e.g. there are only 4 kings in a deck, narrowing the options). In our case, variable (1) would be a time-varying signal encoded in the bursty spikes of model neuron A, and variable (2) would be the read-out taken by model neuron B.
 
 ### Our findings and why they are useful
 
-We found that, in certain cases, neuron A can communicate quite effectively with neuron B, even when there is ambiguity between what spike pairs should be considered bursts, and which should be considered non-bursts! Interestingly, in such cases, the statistics of neuron A's spiking look very similar to how they would look if neuron A was using a rate code. This means that if an experimentalist records neuron activity in the brain and finds that a neuron's spiking looks like a rate code it might actually be stealthily using a temporal, bursting code! Hence the name of the paper.
+We found that, in certain cases, neuron A can communicate quite effectively with neuron B, even when there is ambiguity between which spike pairs should be considered bursts and which should be considered non-bursts! Interestingly, in such cases, the statistics of neuron A's spiking look very similar to how they would look if neuron A was using a rate code. This means that if an experimentalist records neuron activity in the brain and finds that a neuron's spiking looks like a rate code it might actually be stealthily using a temporal, bursting code! Hence the name of the paper.
 
 For a brief overview of some of the math used, and for some key references, see below. Thanks for reading!
 
@@ -82,7 +82,7 @@ I'm not including the equations in this section as they are bulky and don't prov
 - Neuron B is modelled as a nonlinear function of the linearly filtered spike train of neuron A
 
 ### Info Theory Analysis
-To quantify information transmitted we used the mutual information rate, $$\mathbb{I}$$, a generalization of mutual information from random varaibles to stochastic processes:
+To quantify information transmitted we used the mutual information rate, $$\mathbb{I}$$, a generalization of mutual information from random variables to stochastic processes:
 
 $$
 \mathbb{I}(X, Y) = \lim_{T \to \infty}\frac{1}{T}I(X_{0:T};Y_{0:T}),
@@ -119,7 +119,7 @@ For further reading on a given topic, see below (papers are author first; textbo
 - [Neural Burst Codes Disguised as Rate Codes](https://www.nature.com/articles/s41598-021-95037-z)
 
 ### In-blog footnotes
-- $$\dagger$$ : one may notice that the difference between rate and temporal codes is a little more subtle than described above. One could imagine a situation where the stimulus being encoded in the firing rate of cell 'A' changes very quickly, and the downstream cell decoding A's message is very sensitive to each spike. In this case, even with a rate code small differences in spike timing could convey information. In this way, the *real* distinction between rate and temporal codes depends on whether there is information in cell A's spike train at higher frequencies than those of the stimulus that cell A is encoding. The the Theunissen & Miller ref for more details.
+- $$\dagger$$ : one may notice that the difference between rate and temporal codes is a little more subtle than described above. One could imagine a situation where the stimulus being encoded in the firing rate of cell 'A' changes very quickly, and the downstream cell decoding A's message is very sensitive to each spike. In this case, even with a rate code small differences in spike timing could convey information. In this way, the *real* distinction between rate and temporal codes depends on whether there is information in cell A's spike train at higher frequencies than those of the stimulus that cell A is encoding. See the the Theunissen & Miller ref for more details.
 
 
 &nbsp; &nbsp; &nbsp;
