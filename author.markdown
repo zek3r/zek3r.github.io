@@ -18,7 +18,7 @@ Outside of research, I spend a lot of time frolicking outside, making music (usu
 
 
 <div style="text-align:center">    
-  <a href="https://zek3r.github.io/assets/cv_mar23.pdf" style="color:yellow;font-weight:bold">CV</a>
+  <a href="https://zek3r.github.io/assets/cv_current.pdf" style="color:yellow;font-weight:bold">CV</a>
   &nbsp; &nbsp; &nbsp; &nbsp;
   <a href="https://scholar.google.ca/citations?user=KwgL380AAAAJ&hl=en&oi=ao" style="color:yellow;font-weight:bold">Publications</a>
 </div>
