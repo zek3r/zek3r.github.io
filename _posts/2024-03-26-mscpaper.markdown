@@ -76,7 +76,7 @@ For a brief overview of some of the math used, and for some key references, see 
 ## Math Overview
 
 ### Neural Circuit Model
-I'm not including the equations in this section as they are bulky and don't provide too much intution. See the [supp of our paper for them](https://www.nature.com/articles/s41598-021-95037-z).
+I'm not including the equations in this section as they are bulky and don't provide too much intution. See the [supp of our paper for them](https://www.nature.com/articles/s41598-021-95037-z#Sec17).
 - For neuron A, we formulated a new bursting model, the Burst Spike Response Model, inspired by the [Spike Response Model of Gerstner et al](https://en.wikipedia.org/wiki/Spike_response_model) and [previous work](https://www.pnas.org/doi/abs/10.1073/pnas.1720995115) by my MSc supervisor Richard Naud. Mathematically, the model is a point process determined by an event rate and a burst probability: the former determines how often spikes occur and the latter determines whether or not a rapidly-occurring burst spike occurs after the original spike. In neuro-theory language, this is a two compartment model with stochastic spiking, where the first (dendritic) compartment encodes the burst probability and the second somatic compartment encodes the event rate
 - The inputs to neuron A are [Ornstein-Uhlenbeck processes](https://en.wikipedia.org/wiki/Ornstein%E2%80%93Uhlenbeck_process)
 - Neuron B is modelled as a nonlinear function of the linearly filtered spike train of neuron A
