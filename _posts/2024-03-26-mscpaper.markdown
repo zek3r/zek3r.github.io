@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 
 # Decoding the Language of the Brain
-Welcome to my first blog post! My first few posts will be about the peer-review publications that I have contributed to during my Masters and PhD thus far. Today's blog is about my MSc thesis paper: ***[Neural Burst Codes Disguised as Rate Codes](https://www.nature.com/articles/s41598-021-95037-z)***, a title which will hopefully make sense by the end of this post!
+Welcome to my first blog post! My first few posts will be about the peer-reviewed publications that I have contributed to during my Masters and PhD thus far. Today's blog is about my MSc thesis paper: ***[Neural Burst Codes Disguised as Rate Codes](https://www.nature.com/articles/s41598-021-95037-z)***, a title which will hopefully make sense by the end of this post!
 
 ## The Big Picture (Background)
 
