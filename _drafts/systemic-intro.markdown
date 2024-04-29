@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "STEM and the System"
-date:   2024-04-29 21:10:02 -0400
+date:   2024-04-28 18:00:00 -0400
 categories: jekyll update
 ---
 
