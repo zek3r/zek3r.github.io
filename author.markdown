@@ -10,7 +10,7 @@ permalink: /author/
 
 # Ezekiel (Zeke) Williams
 
-I’m a PhD candidate in applied mathematics at Université de Montréal and Mila, the Quebec AI Institute. My research spans applied mathematics, neuroscience, and statistical machine learning--in particular, probability theory, dynamical systems, and learning and memory in Recurrent Neural Network (RNN) models. My current work focuses on temporal credit assignment--learning problems that require memory--and the roles/impacts of stochasticity in RNNs.
+I’m a postdoctoral researcher at Imperial College London. My research spans applied mathematics, neuroscience, and statistical machine learning--in particular, probability theory, dynamical systems, and learning and memory in Recurrent Neural Network (RNN) models. My current work focuses on temporal credit assignment--learning problems that require memory--and the roles/impacts of stochasticity in RNNs.
 
 Outside of research, I spend a lot of time frolicking outside, making music (usually inside), engaging in activism, and reading/listening to podcasts on economics, philosophy, politics, and the news.
 
