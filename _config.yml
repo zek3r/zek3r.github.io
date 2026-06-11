@@ -22,7 +22,7 @@ title: Computational Cognition
 author: Ezekiel Williams
 email: yes
 description: >- # this means to ignore newlines until "baseurl:"
-  A computational neuroscience blog, written by an Imperial College postdoctoral researcher.
+  A computational neuroscience website created by a postdoctoral researcher from Imperial College London.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: zek3r
