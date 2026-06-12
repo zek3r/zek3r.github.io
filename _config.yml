@@ -25,10 +25,10 @@ description: >- # this means to ignore newlines until "baseurl:"
   A computational neuroscience website created by a postdoctoral researcher from Imperial College London.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-bsky_username: ezekielwilliams
+bsky_username: bluesky
 #github_username:  zek3r
-gitlab_username: zek3r
-linkedin_username: ezekiel williams
+gitlab_username: gitlab
+linkedin_username: linkedin
 gs_username: publications
 # mastodon:
 # - username: ezekiel
